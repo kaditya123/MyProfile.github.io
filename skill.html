@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skills</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+        integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+        integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+            background-color: rgb(0, 12, 61);
+        }
+
+        nav {
+            font-family: 'Orbitron', sans-serif !important;
+            position: fixed;
+            top: 0;
+            height: 80px;
+            width: 100%;
+            padding: 10px 30px;
+            background-color: rgb(0, 0, 0, 0.5);
+        }
+
+        label.logo {
+            background: none;
+            color: rgb(205, 230, 250);
+            font-weight: bold;
+            font-size: 40px;
+            padding: 0 15px;
+            padding-bottom: 5px;
+            line-height: 55px;
+            letter-spacing: 3px;
+            margin-left: 60px;
+            font-family: 'Megrim', cursive;
+            text-shadow: 0 0 15px rgb(128, 147, 243), 0 0 25px rgb(128, 147, 243), 0 0 35px rgb(128, 147, 243);
+        }
+
+        nav ul {
+            float: right;
+            margin-top: 15px;
+        }
+
+        nav ul li {
+            background: none;
+            line-height: 20px;
+            margin: 0 5px;
+            display: inline-block;
+        }
+
+        nav ul li a {
+            background: none;
+            color: white;
+            font-size: 17px;
+            text-transform: uppercase;
+            padding: 5px 11px;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        a.active,
+        a:hover {
+            border-color: #1b9bff;
+            box-shadow: 0 0 40px blue;
+            transition: 0.8s;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 54px;
+            margin-right: 60px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+                padding-left: 17px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 1305px) {
+            .checkbtn {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #000566;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all 0.5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            a:hover,
+            a.active {
+                background: none;
+                color: #ffffff;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+
+        .sec1 {
+            margin-top: 80.5px;
+            background-color: rgb(0, 12, 61);
+        }
+
+        .lang {
+            display: inline-block;
+            width: 30%;
+            height: auto;
+            padding: 25px;
+            margin: 22px;
+            text-align: center;
+            /* border: 2px solid rgb(144, 184, 245); */
+            border-radius: 50px;
+            animation: slideMe2 1s ease-in;
+        }
+        @keyframes slideMe2 {
+            0% {
+                transform: skewX(0deg) translateX(500px);
+                opacity: 0;
+            }
+        }
+
+        .lang p {
+            color: white;
+            font-size: 20px;
+        }
+
+        .fas {
+            color: white;
+            text-shadow: 0 0 100px rgb(0, 156, 223),
+                0 0 100px rgb(0, 156, 223),
+                0 0 150px rgb(0, 156, 223);
+            font-size: 100px;
+            margin-bottom: 25px;
+            animation: animate 5s linear infinite;
+            cursor: pointer;
+        }
+
+        .fas:hover {
+            font-size: 130px;
+            transition: 0.2s;
+            transition-timing-function: ease-out;
+            text-shadow: 0 0 50px rgb(241, 172, 54),
+                0 0 100px rgb(241, 172, 54),
+                0 0 150px rgb(241, 172, 54);
+        }
+
+        .txt1 {
+            margin-left: 30%;
+            border-bottom: 2px solid rgb(131, 222, 245);
+            border-left: 2px solid rgb(131, 222, 245);
+            border-bottom-left-radius: 20px;
+        }
+
+        .txt1 p {
+            color: white;
+            font-size: 30px;
+            display: block;
+            padding: 10px;
+            width: auto;
+        }
+
+        @media (max-width: 700px) {
+            .sec1 {
+                align-items: center;
+            }
+
+            .container {
+                align-items: center;
+                margin-top: 10px !important;
+                margin: 45px;
+            }
+
+            .lang {
+                width: 100%;
+                margin-left: 1% !important;
+            }
+
+            .txt1 {
+                width: auto !important;
+                margin-left: 5%;
+                text-align: center;
+            }
+        }
+
+
+
+        @media screen and (max-width: 1219px) {
+            .about {
+                width: 100%;
+                height: auto !important;
+                padding: 10px 0px;
+            }
+
+            .aboutme_text {
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            .about .main img {
+                margin-bottom: -76px;
+            }
+
+            .main {
+                display: inline-block !important;
+            }
+
+            .aboutme_text h1 {
+                padding-top: 10px;
+                font-size: 50px;
+                margin-bottom: 25px;
+            }
+        }
+
+        .about {
+            display: flex;
+            width: 100%;
+            height: auto;
+            background-color: #020f2f;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .main img {
+            padding: 40px 40px 40px;
+            margin-top: 20px;
+            height: auto;
+            width: 660px;
+            max-width: 100%;
+            box-shadow: -5px -10px 20px rgb(237, 237, 255);
+            animation: slideMe 1s ease-in;
+        }
+        .giff{
+            animation: slideMe2 1s ease-in !important;
+        }
+
+        @keyframes slideMe {
+            0% {
+                transform: skewX(0deg) translateX(-300px);
+                opacity: 0;
+            }
+        }
+
+        .aboutme_text {
+            text-align: center;
+            width: auto;
+            max-width: 100%;
+            padding: 10px 10px;
+            margin-left: 10px;
+            margin-top: 50px;
+        }
+
+        .main {
+            width: 1280px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .aboutme_text h1 {
+            color: rgb(197, 223, 252);
+            font-size: 45px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            margin-top: 25px !important;
+        }
+
+        .aboutme_text h5 {
+            color: rgb(165, 205, 251);
+            font-size: 25px;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+        span {
+            color: #5359fc;
+        }
+
+        .aboutme_text p {
+            color: rgb(228, 250, 255);
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+
+        .high {
+            color: rgb(255, 249, 80) !important;
+        }
+        .proj{
+            color: white;
+            font-size: 40px;
+            display: block;
+            text-align: center;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            padding-left: 100px;
+            width: auto;
+            margin-right: 30%;
+            border-bottom: 2px solid rgb(131, 222, 245);
+            border-right: 2px solid rgb(131, 222, 245);
+            border-bottom-right-radius: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">A.K..</label>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About me</a></li>
+            <li><a class="active" href="/skill.html">Skills & Projects</a></li>
+            <li><a href="/extra.html">Extracurricular</a></li>
+            <li><a href="/contact.html">Contact me</a></li>
+        </ul>
+    </nav>
+    <div class="sec1">
+        <div class="txt1">
+            <p> Experience With Technical Tools </p>
+        </div>
+        <section class="container">
+            <div class="lang htmll">
+                <i class="fas fa fa-html5" aria-hidden="true"></i>
+                <p> --HTML-- <br>Gained a lot of structuring and designing skills by using it for this website, and still improving to gain more confidence on it. </p>
+            </div>
+
+            <div class="lang cppp">
+                <h1 class="fas">C++</h1>
+                <p>-C++ LANGUAGE- <br>Proficient language which I generally use to practice problems based on Data Structures and Algorithms.</p>
+            </div>
+
+            <div class="lang csss">
+                <i class="fas fa fa-css3" aria-hidden="true"></i>
+                <p>--CSS-- <br>Plays an important role to show the creativity of site. More than 50% of the code is based on css only which gives the static look to site.</p>
+            </div>
+    </div>
+    </section>
+     
+    <div class="proj">
+        Projects
+    </div>
+
+    <section class="about">
+        <div class="main">
+
+            <img src="/images/website.png" alt="" />
+
+            <div class="aboutme_text">
+                <h1>Portfolio Website</h1>
+                <p>
+                    Well, the website which you are currently surfing on is the part of my self-project on web
+                    development. <br>
+                    Tools used were : <br> HTML <br> CSS <br>and a bit of JAVASCRIPT, FONTAWESOME, BOOTSTRAP, JQUERY
+                    scripts. <br> I tried to use as much as creativity I had to describe myself in such a platform. <i
+                        class="fa fa-smile-o" aria-hidden="true"></i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="main">
+            <div class="aboutme_text">
+                <h1 style="color: rgb(182, 210, 255);">Arduino Obstacle Avoiding Car</h1>
+                <p>
+                    It is a resistance avoiding car which uses Ultrasonic sensors for distance measurement and according
+                    to the value it decides whether to move forward or not, if not, it stops and looks left & right for
+                    the forward way.
+                    <br> This was a team work (4 members) based DIY course project which we did in our 1st year of
+                    collage.
+                    <br> Due to the Covid rule at that time, we did it in a complete online mode and, <br> I <span
+                        class="high">took the major resposibility to buy and assemble the components at home.</span>
+                    <br>Components Used: Arduino UNO, Gear & Servo motors, Ultrasonic sensor, Motor driver shield,
+                    Jumper wires and Battery.
+                    <br> <span class="high"> Problems We Faced: Arduino board was not accepting the code from the IDE,
+                        we tried to Debug a lot and finally got the ROOT CAUSE of the problem (Bootloader issue of the
+                        board), and finally resolved it.</span>
+                    <br> Impact: Appreciation and Excellent grade from the proffessor.
+                </p>
+            </div>
+            <img class="giff" src="/images/carGIF.gif" alt="">
+        </div>
+    </section>
+
+</body>
+
+</html>
